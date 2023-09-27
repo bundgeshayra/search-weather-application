@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'weather';
+  title = 'weather-application';
+  public segment: string = "current-weather";
+  public arr = new Array(25);
+  constructor(
+  ){
+
+  }
+
+  segmentChanged(ev: any) {
+    this.segment = ev.detail.value;
+  }
 }

@@ -1,0 +1,14 @@
+<ion-row>
+
+    <ion-col>
+        <ion-searchbar placeholder="Search..."  value="pune" animated="true"
+            show-cancel-button="focus" show-clear-button="focus" (ionInput)="onSearchInput($event)" #q>
+        </ion-searchbar>
+    </ion-col>
+    <ion-col>
+        <ion-button (click)="search(q)">
+            search
+        </ion-button>
+    </ion-col>
+
+</ion-row>

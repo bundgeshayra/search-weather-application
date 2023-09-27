@@ -1,0 +1,8 @@
+<p>current-weather !</p>
+<app-search-bar (newSearchEvent)="search($event)"></app-search-bar>
+<div *ngIf="location && weather">
+    <h2>{{weather['location']}} weather</h2>
+    <h4>temperature: {{weather['temperature']}}</h4>
+    <h4>description : {{weather['description']}}</h4>
+    <h4>icon : {{weather['icon']}}</h4>
+</div>

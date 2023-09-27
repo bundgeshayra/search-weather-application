@@ -1,0 +1,21 @@
+<p>weather-forcast !</p>
+<app-search-bar (newSearchEvent)="search($event)"></app-search-bar>
+<ion-card>
+    <ion-card-header>
+        <ion-card-title>Forcast Weather</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-list *ngFor="let weather of forcastData">
+            <ion-item>
+                <ion-thumbnail slot="start">
+                </ion-thumbnail>
+                <ion-label>Date : {{weather['dt_txt']}}</ion-label>
+
+                <ion-label>temperature : {{weather['main']['temp']}}</ion-label>
+                <ion-label>description : {{weather['weather'][0].description}}</ion-label>
+            </ion-item>
+
+
+        </ion-list>
+    </ion-card-content>
+</ion-card>
